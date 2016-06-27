@@ -50,11 +50,12 @@ public class BridgeImpl implements IBridge {
 
 
     public static void testActivity(WebView webView, JSONObject param, final Callback callback) {
-        String message = "testActivity";// param.optString("msg");
+        String message = param.optString("msg");
         Toast.makeText(webView.getContext(), message, Toast.LENGTH_SHORT).show();
 
         //--
         Intent i = new Intent ();
+        i.putExtra("title",message);
         i.setClass(MainActivity.context, LoginActivity.class);
         MainActivity.context.startActivity(i);
     }

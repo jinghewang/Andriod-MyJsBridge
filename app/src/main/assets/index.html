@@ -10,11 +10,11 @@
     <script type="text/javascript">
 
         function test(name){
-            alert('test' + name);
+            alert('test:' + name);
         }
 
         function test2(name){
-            alert('test2' + name);
+            alert('test2:' + name);
         }
     </script>
     <style>
@@ -53,19 +53,9 @@
 <ul class="list">
     <li>
         <div>
-            <button onclick="JSBridge.call('bridge','testActivity',{},function(res){alert(JSON.stringify(res))})">
+            <button onclick="JSBridge.call('bridge','testActivity',{'msg':'I am new activity'},function(res){alert(JSON.stringify(res))})">
                 测试开启新界面
             </button>
-        </div>
-    </li>
-    <br/>
-</ul>
-
-<ul class="list">
-    <li>
-        <div id="ul3">
-
-
         </div>
     </li>
     <br/>

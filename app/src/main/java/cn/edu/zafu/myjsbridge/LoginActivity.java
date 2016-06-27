@@ -1,5 +1,6 @@
 package cn.edu.zafu.myjsbridge;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -9,5 +10,11 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        //--
+        Intent intent = getIntent();
+        String s = intent.getStringExtra("title");
+        if (s != null && s.length() > 0)
+            this.setTitle(s);
     }
 }
