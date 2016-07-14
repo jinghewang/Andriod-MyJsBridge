@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         final WebView mWebView = (WebView) findViewById(R.id.webview);
         WebSettings settings = mWebView.getSettings();
         settings.setJavaScriptEnabled(true);
+        settings.setDatabaseEnabled(true);
+        settings.setDomStorageEnabled(true);
         mWebView.setWebChromeClient(new JSBridgeWebChromeClient());
         mWebView.loadUrl("file:///android_asset/index.html");
 
